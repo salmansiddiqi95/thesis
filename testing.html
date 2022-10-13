@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Video Programming</title>
+        <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+        <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <span id="span"></span>
+      <div id="div1">
+        <video id="videoplayer" class="vjs-matrix video-js vjs-big-play-centered" data-setup ="{}">
+            <!-- <source src="assets/gT3TTEGUJ4_720p.mp4" type="video/mp4"/> -->
+            <track kind="captions" src="assets/transcript.vtt" srclang="de" label="Deutsch" default>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                  >supports HTML5 video</a
+                >
+              </p>
+        </video>
+
+        <video id="videoplayer1" class="vjs-matrix1 video-js vjs-big-play-centered" data-setup ="{}">
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4"/>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                  >supports HTML5 video</a
+                >
+              </p>
+        </video>
+     
+      </div>
+        <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+        <script src="https://cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
+        <script type="text/javascript" src='plugins/videojs.zoomrotate.js'></script>
+        <script type="text/javascript" src="plugins/rotate.js"></script>
+        <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
+        <script type="text/javascript" src="videoplayer.js"></script>
+        
+      
+
+    </body>
+</html>

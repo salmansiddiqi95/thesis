@@ -1,0 +1,25 @@
+.vjs-matrix.video-js {
+  color: #00ff00;
+    margin-left: 100pt;
+    float: left;
+    margin-top: -30pt;
+    border: 0px solid;
+    padding: 20px;
+    width: 500px;
+    resize: both;
+    overflow: auto;
+  }
+
+  .vjs-matrix1.video-js {
+    color: #00ff00;
+    margin-left: 475pt;
+    border: 2px solid;
+    padding: 20px; 
+    width: 500px;
+    resize: both;
+    overflow: auto;
+    
+  }
+ 
+
+ 
