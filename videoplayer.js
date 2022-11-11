@@ -11,13 +11,10 @@ var player = videojs('videoplayer',{
 
         }
         
-    }
-
-
-    
-    
-    
+    }  
 });
+player.rotate();
+
 player.src([
     {
        src: "assets/gT3TTEGUJ4_720p.mp4",
@@ -36,38 +33,34 @@ player.src([
        label: '360P',
     },
  ]);
+
  player.controlBar.addChild('QualitySelector');
-
-  
-  var span = document.querySelector('span');
-
-  player.ready (function(){
-    if (!player.textTracks) {
-        console.log('no textrack foend');
+ var span = document.querySelector('span');
+ player.ready (function(){
+   if (!player.textTracks) {
+     console.log('no textrack foend');
+    }
+    var track = player.textTracks()[0];
+    track.mode = 'hidden';
+    track.oncuechange = function(e) {
+      var cue = this.activeCues[0];
+      if (cue) {
+        span.innerHTML = '';
+        span.appendChild(cue.getCueAsHTML());
       }
-    
-      
-      
-      var track = player.textTracks()[0];
-      track.mode = 'hidden';
-    
-      track.oncuechange = function(e) {
-    
-          var cue = this.activeCues[0];
-          if (cue) {
-              span.innerHTML = '';
-              span.appendChild(cue.getCueAsHTML());
-          }
-    
-      };
-
+    };
   });
+  const ControlBar = videojs.getComponent('ControlBar');
+  var controls = document.getElementById('controls');
+  console.log(controls);
+  var controlBar = new ControlBar(player);
+  console.log(controlBar);
+  // player calls dispose on children, but this is not a child
+  player.on('dispose', controlBar.dispose.bind(controlBar))
+  controls.appendChild(controlBar.el());
 
-  
 
-  
-
-var player1 = videojs('videoplayer1',{
+  var player1 = videojs('videoplayer1',{
     autoplay: 'muted',
     controls: true,
     width: 500,
@@ -79,11 +72,12 @@ var player1 = videojs('videoplayer1',{
         hotkeys: {
 
         }
-    }
-    
-    
+    }   
 });
-player.rotate(player);
+
+
+
+
 
 
 

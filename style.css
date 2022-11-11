@@ -1,4 +1,38 @@
 .vjs-matrix.video-js {
+  
+  }
+
+#subtitle{
+  margin-top: 250pt;
+  margin-left: 150pt;
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  border: 0px solid;
+  padding: 20px; 
+    width: 500px;
+    resize: both;
+    overflow: auto;
+}
+
+#span {
+ 
+}
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+#controls{
+  margin-top: 100pt;
+}
+
+#div1{
   color: #00ff00;
     margin-left: 100pt;
     float: left;
@@ -8,10 +42,10 @@
     width: 500px;
     resize: both;
     overflow: auto;
-  }
 
-  .vjs-matrix1.video-js {
-    color: #00ff00;
+}
+
+  #div2 {
     margin-left: 475pt;
     border: 2px solid;
     padding: 20px; 
