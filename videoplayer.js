@@ -7,34 +7,32 @@ var player = videojs('videoplayer',{
     responsive: true,
     playbackRates: [0.5, 1, 2.5, 5],
     plugins: {
-        hotkeys: {
+        hotkeys: {}
+      }  
+  });
 
-        }
-        
-    }  
-});
 player.rotate();
 
 player.src([
     {
+       src: "assets/gT3TTEGUJ4_480p.mp4",
+       type: 'video/mp4',
+       label: '480P',
+    },
+    {
        src: "assets/gT3TTEGUJ4_720p.mp4",
        type: 'video/mp4',
        label: '720P',
-    },
-    {
-       src: "assets/gT3TTEGUJ4_720p.mp4",
-       type: 'video/mp4',
-       label: '480P',
        selected: true,
     },
     {
-       src: "assets/gT3TTEGUJ4_720p.mp4",
+       src: "assets/gT3TTEGUJ4_1080p.mp4",
        type: 'video/mp4',
-       label: '360P',
+       label: '1080P',
     },
  ]);
-
  player.controlBar.addChild('QualitySelector');
+ 
  var span = document.querySelector('span');
  player.ready (function(){
    if (!player.textTracks) {
